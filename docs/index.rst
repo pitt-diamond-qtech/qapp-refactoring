@@ -6,7 +6,6 @@ QApps Documentation
    
    getting_started
    hardware
-   sequences
 
 ==================
 
