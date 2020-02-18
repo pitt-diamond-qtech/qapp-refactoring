@@ -1,5 +1,7 @@
 # In-Process Refactoring of Experimentation Software
 
+#### The *latest documentation* is available [here](https://qapp-refactoring.readthedocs.io/en/latest/).
+
 ## What are we looking to accomplish?
 1. Abstract basic functionality to streamline development of future experimentation software
 2. Increase code reuse with functionality that is well generalized and well documented
