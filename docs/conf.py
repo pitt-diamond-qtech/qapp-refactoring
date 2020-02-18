@@ -14,6 +14,30 @@ import os
 import sys
 sys.path.insert(0, os.path.abspath('..'))
 
+# Source code directories to ignore
+subdir_ignore = [
+	os.path.abspath('../docs'),
+	os.path.normpath('/.git'),
+	os.path.normpath('/.idea'),
+	os.path.normpath('/.vscode'),
+	os.path.normpath('/__pycache__')
+]
+
+# Add source code directories
+subdirectories = [x[0] for x in os.walk(os.path.abspath('..'))]
+for subdir in subdirectories:
+
+	# Check if subdirectory should be ignored
+	ignore_dir = False
+	for ignore in subdir_ignore:
+		if ignore in subdir:
+			ignore_dir = True
+			break
+	# Add subdirectory to path if not ignored
+	if (not ignore_dir):
+		sys.path.insert(0, subdir)
+		print("Inserted subdir: " + subdir)
+
 # -- Project information -----------------------------------------------------
 
 project = 'qapps'
